@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <body>
+        <ui:composition>
+            <div>
+                <h:form>
+                    <ul class="nav nav-pills nav-stacked esquerda">
+                        <li>
+                            <h:commandLink action="/templates/layout" class="btn btn-lg">
+                                <span class="glyphicon glyphicon-home"></span> Home
+                            </h:commandLink>
+                        </li>
+                        <li class="alert alert-info h4">
+                            <span class="glyphicon glyphicon-floppy-disk"/> Cadastros
+                        </li>
+                        <li>
+                            <h:commandLink action="#{professorBean.cadastrarNovo()}" class="btn btn-lg">
+                                <span class="glyphicon glyphicon-user"></span> Professor
+                            </h:commandLink>
+                        </li>                        
+                        <li>
+                            <h:commandLink action="#{escolaBean.cadastrarNovo()}" class="btn btn-link btn-lg">
+                                <span class="glyphicon glyphicon-home"></span> Escola
+                            </h:commandLink>
+                        </li>                        
+                        <li>
+                            <h:commandLink action="#{alunoBean.cadastrarNovo()}" class="btn btn-link btn-lg">
+                                <span class="glyphicon glyphicon-headphones"></span> Aluno
+                            </h:commandLink>
+                        </li>
+                        <li class="alert alert-info h4">
+                            <span class="glyphicon glyphicon-eye-open"/> Listas
+                        </li>
+                        <li>
+                            <h:commandLink action="/professor/ListarProfessores" class="btn btn-link btn-lg">
+                                <span class="glyphicon glyphicon-list-alt"></span> Professores
+                            </h:commandLink>
+                        </li>
+                        <li>
+                            <h:commandLink action="/escola/ListarEscolas" class="btn btn-link btn-lg">
+                                <span class="glyphicon glyphicon-list"></span> Escolas
+                            </h:commandLink>
+                        </li>
+                        <li>
+                            <h:commandLink action="/aluno/ListarAlunos" class="btn btn-link btn-lg">
+                                <span class="glyphicon glyphicon-sort-by-alphabet-alt"></span> Alunos
+                            </h:commandLink>
+                        </li>
+                    </ul>
+                </h:form>
+            </div>
+        </ui:composition>
+    </body>
+</html>
+

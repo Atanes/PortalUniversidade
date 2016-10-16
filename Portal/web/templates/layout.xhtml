@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>
+            <ui:insert name="titulo">Portal da Universidade</ui:insert>
+        </title>       
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <h:outputStylesheet library="bootstrap/css" name="bootstrap.min.css"/>          
+        <h:outputStylesheet library="bootstrap/css" name="bootstrap-theme.min.css" />    
+        <h:outputStylesheet library="bootstrap/css" name="estilo_projeto.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <h:outputScript library="bootstrap/js" name="bootstrap.min.js"/>
+        <link rel="shortcut icon" href="../resources/imagens/portalAluno.ico"/>
+    </h:head>
+    <h:body>
+        <div id="container">
+            <div class="cabecalho">
+                <ui:insert name="imagem">
+                    <h:graphicImage library="imagens" name="portalAluno1.png" >
+                        <f:passThroughAttribute name="alt" value="Imagem do portal do aluno"/>
+                    </h:graphicImage> 
+                </ui:insert>
+                <h1>
+                    <ui:insert name="tituloCabecalho">
+                        Portal da Universidade
+                    </ui:insert>
+                </h1>
+            </div>
+            <div id="menu" class="col-md-2">
+                <ui:insert name="menu">
+                    <ui:include src="menu.xhtml"/>
+                </ui:insert>
+            </div>
+            <div id="corpo" class="col-md-10 margem_corpo">
+                <ui:insert name="corpo">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <h:graphicImage library="imagens" name="metodistaRudgeRamos.jpeg" alt="Campus da Universidade"/>           
+                                <div class="carousel-caption">
+                                    <h3>Campus da Universidade</h3>
+                                    <p>Um ambiente muito agradavél para seus estudos</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <h:graphicImage library="imagens" name="ginasioMetodista.jpg" alt="Ginásio da Universidade"/>
+                                <div class="carousel-caption">
+                                    <h3>Ginásio da Universidade</h3>
+                                    <p>Infra-estrutura completa para prática de atividades esportivas</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <h:graphicImage library="imagens" name="entradaAuditorio.jpg" alt="Auditório da Universidade"/>
+                                <div class="carousel-caption">
+                                    <h3>Auditório da Universidade</h3>
+                                    <p>Espaço para palestras e eventos</p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <h:graphicImage library="imagens" name="bibliotecaMetodista.jpg" alt="Biblioteca da Universidade"/>
+                                <div class="carousel-caption">
+                                    <h3>Biblioteca da Universidade</h3>
+                                    <p>Um acervo muito grande de livros e periódicos</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Próximo</span>
+                        </a>
+                    </div>
+                </ui:insert>
+            </div>
+        </div>
+    </h:body>
+</html>
+
