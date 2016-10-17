@@ -4,17 +4,18 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+
     <h:head>
         <title>
             <ui:insert name="titulo">Portal da Universidade</ui:insert>
         </title>       
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <h:outputStylesheet library="bootstrap/css" name="bootstrap.min.css"/>          
-        <h:outputStylesheet library="bootstrap/css" name="bootstrap-theme.min.css" />    
-        <h:outputStylesheet library="bootstrap/css" name="estilo_projeto.css" />
+        <h:outputStylesheet library="bootstrap" name="css/bootstrap.min.css"/>
+        <h:outputStylesheet library="bootstrap" name="css/bootstrap-theme.min.css"/>
+        <h:outputStylesheet library="bootstrap" name="css/estilo_projeto.css"/>        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <h:outputScript library="bootstrap/js" name="bootstrap.min.js"/>
+        <h:outputScript library="bootstrap" name="js/bootstrap.min.js"/>        
         <link rel="shortcut icon" href="../resources/imagens/portalAluno.ico"/>
     </h:head>
     <h:body>
@@ -45,6 +46,7 @@
                             <li data-target="#myCarousel" data-slide-to="1"></li>
                             <li data-target="#myCarousel" data-slide-to="2"></li>
                             <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
                         </ol>
 
                         <!-- Wrapper for slides -->
@@ -78,6 +80,13 @@
                                 <div class="carousel-caption">
                                     <h3>Biblioteca da Universidade</h3>
                                     <p>Um acervo muito grande de livros e periódicos</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <h:graphicImage library="imagens" name="pracaMetodista.jpg" alt="Praça central da Universidade"/>
+                                <div class="carousel-caption">
+                                    <h3>Praça central da Universidade</h3>
+                                    <p>Um lugar muito agradavél para relaxar entre uma aula e outra</p>
                                 </div>
                             </div>
                         </div>

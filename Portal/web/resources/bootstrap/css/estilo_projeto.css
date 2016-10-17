@@ -74,9 +74,6 @@ tbody tr:nth-child(odd){
     text-align: left;
 }
 
-.margen_padrao {
-    margin: 5px 5px 5px 5px;
-}
 .margem_corpo{
     margin-top: 10px;
 }
