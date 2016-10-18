@@ -25,7 +25,7 @@ public class Escola implements Serializable {
     private Long id;
     private String nome;
     private String localizacao;
-    private int anoCriacao;
+    private Integer anoCriacao;
 
     public Long getId() {
         return id;
@@ -51,11 +51,11 @@ public class Escola implements Serializable {
         this.localizacao = localizacao;
     }
 
-    public int getAnoCriacao() {
+    public Integer getAnoCriacao() {
         return anoCriacao;
     }
 
-    public void setAnoCriacao(int anoCriacao) {
+    public void setAnoCriacao(Integer anoCriacao) {
         this.anoCriacao = anoCriacao;
     }
 

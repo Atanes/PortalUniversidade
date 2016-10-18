@@ -17,7 +17,7 @@
         </ui:define>
         <ui:define name="corpo">
             <h:form id="formulario">
-                <fieldset class="alert alert-info controlesForm">
+                <fieldset class="alert alert-info">
                     <div class="form-group row">
                         <h:outputLabel class="col-xs-2">Matricula:</h:outputLabel>
                         <div class="col-xs-2">
@@ -44,15 +44,13 @@
                             </h:inputText>                   
                         </div>
                     </div>
-
                 </fieldset>
-                    <div class="form-group row controlesForm">                    
-                        <h:commandLink class="btn btn-info" action="#{alunoBean.salva}" >
-                            <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Salvar
-                        </h:commandLink>
-
-                        <h:messages class="alert-danger"/>
-                    </div> 
+                <div>                    
+                    <h:commandLink class="btn btn-info" action="#{alunoBean.salva}" >
+                        <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Salvar
+                    </h:commandLink>
+                </div>
+                <h:messages class="mensagens"/>                                  
             </h:form>
         </ui:define>
     </ui:composition>

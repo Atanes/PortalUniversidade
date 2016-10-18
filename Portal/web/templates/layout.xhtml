@@ -20,7 +20,7 @@
     </h:head>
     <h:body>
         <div id="container">
-            <div class="cabecalho">
+            <div class="cabecalho margem_padrao ajuste_margensLayout">
                 <ui:insert name="imagem">
                     <h:graphicImage library="imagens" name="portalAluno1.png" >
                         <f:passThroughAttribute name="alt" value="Imagem do portal do aluno"/>
@@ -32,12 +32,12 @@
                     </ui:insert>
                 </h1>
             </div>
-            <div id="menu" class="col-md-2">
+            <div id="menu" class="col-md-2 ajuste_margensLayout">
                 <ui:insert name="menu">
                     <ui:include src="menu.xhtml"/>
                 </ui:insert>
             </div>
-            <div id="corpo" class="col-md-10 margem_corpo">
+            <div id="corpo_pagina" class="col-md-10 ajuste_margensLayout">
                 <ui:insert name="corpo">
                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->

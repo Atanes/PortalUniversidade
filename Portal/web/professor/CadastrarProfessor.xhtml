@@ -22,7 +22,6 @@
                         <h:outputLabel class="col-xs-2">Nome:</h:outputLabel>
                         <div class="col-xs-8">
                             <h:inputText id="nome" class="form-control" value="#{professorBean.prof.nome}" required="true" requiredMessage="Preenchimento do campo &ldquo;Nome&rdquo; é obrigatório!!"/>
-                            <h:message class="alert-danger" for="nome"/>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -37,7 +36,6 @@
                                 <f:selectItem itemValue="Mestre" itemLabel="Mestre" />
                                 <f:selectItem itemValue="Especialista" itemLabel="Especialista" />
                             </h:selectOneMenu>
-                            <h:message class="alert-danger" for="titulacao"/>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -47,17 +45,16 @@
                                 <f:passThroughAttribute name="type" value="number"/>
                                 <f:passThroughAttribute name="min" value="1970"/>
                             </h:inputText>
-                            <h:message class="alert-danger" for="ano"/>
                         </div>
                     </div>
                 </fieldset>
-                <div class="form-group row controlesForm">
+                <div>
                     <h:commandLink class="btn btn-info" action="#{professorBean.salva}" >
                         <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Salvar
                     </h:commandLink>
-
-                    <h:messages class="alert-danger"/>
                 </div>
+                <h:messages class="mensagens"/>
+
             </h:form>
         </ui:define>
     </ui:composition>

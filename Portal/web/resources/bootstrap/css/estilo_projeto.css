@@ -7,34 +7,25 @@
     background-color: azure;
 }
 
-hr {
-    clear: both;
-    border-color: aquamarine;
-    line-height:2px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
 thead {
     background-color: deepskyblue;
 }
 
 tbody tr:nth-child(odd){
-   background-color: #E9E9E9;
+    background-color: #E9E9E9;
 }
 #ajuste_tabelas {
     width: 90%;
-    margin-left: 5%;
 }
 
 #container {
-   width: 90%;
-   margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #label_portal{
-   font-family: 'Cinzel', serif;
-   font-size: 1.2em;
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
 }
 .cabecalho {
     position: relative;
@@ -42,8 +33,7 @@ tbody tr:nth-child(odd){
     text-align: center;
     width: 100%;
     background-color: #bce8f1;
-    border-radius: 10px;
-    margin-top: 5px;
+    border-radius: 5px;
 }
 
 .cabecalho img {
@@ -60,13 +50,7 @@ tbody tr:nth-child(odd){
     position: relative;
     margin-top: 3%;
 }
-.cabecalho h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5em;
-    color: #337ab7;
-    position: relative;
-    margin-top: 20px;
-}
+
 .centralizar {
     text-align: center;
 }
@@ -74,18 +58,30 @@ tbody tr:nth-child(odd){
     text-align: left;
 }
 
-.margem_corpo{
-    margin-top: 10px;
+.mensagens{
+    color: #B22222;
+    font-size: 14px;
+    margin-left: 5px;
 }
 
-.margem_menu{
-    margin-top: 25px;
-}
-.controlesForm{
-    margin: 5px;
-}
 .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
-  }
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+
+.titulos_menu {
+    border-radius: 5px;
+    border: 1px solid #9acfea;
+    color: #31708f;
+    text-align: center;
+    background-image: linear-gradient(to bottom,#d9edf7 0,#b9def0 100%);
+    font-size: 18px;
+    padding: 10px      
+}
+
+.ajuste_margensLayout{
+    margin-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+}

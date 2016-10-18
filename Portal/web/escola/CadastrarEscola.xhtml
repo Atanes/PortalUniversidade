@@ -27,7 +27,7 @@
                     <div class="form-group row">
                         <h:outputLabel class="col-xs-2">Localização:</h:outputLabel>
                         <div class="col-xs-2">
-                            <h:selectOneMenu id="localizacao" class="form-control" value="#{escolaBean.escola.localizacao}" required="true" requiredMessage="Preenchimento do campo &ldquo;Local&rdquo; é obrigatório!!" >
+                            <h:selectOneMenu id="localizacao" class="form-control" value="#{escolaBean.escola.localizacao}" required="true" requiredMessage="Preenchimento do campo &ldquo;Localização&rdquo; é obrigatório!!" >
                                 <f:selectItem itemValue="" itemLabel="Selecione..." />
                                 <f:selectItem itemValue="Rudge Ramos" itemLabel="Rudge Ramos" />
                                 <f:selectItem itemValue="Planalto" itemLabel="Planalto" />
@@ -45,13 +45,12 @@
                         </div>
                     </div>
                 </fieldset>
-                <div class="form-group row controlesForm">
+                <div>
                     <h:commandLink class="btn btn-info" action="#{escolaBean.salva}" >
                         <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Salvar
                     </h:commandLink>
-                    
-                    <h:messages class="alert-danger"/>
                 </div>
+                <h:messages class="mensagens"/>
             </h:form>
         </ui:define>
     </ui:composition>

@@ -7,14 +7,14 @@
         <ui:composition>
             <div>
                 <h:form>
-                    <ul class="nav nav-pills nav-stacked esquerda">
+                    <ul class="nav nav-pills nav-stacked">
                         <li>
                             <h:commandLink action="/templates/layout" class="btn btn-lg">
                                 <span class="glyphicon glyphicon-home"></span> Home
                             </h:commandLink>
                         </li>
-                        <li class="alert alert-info h4">
-                            <span class="glyphicon glyphicon-floppy-disk"/> Cadastros
+                        <li class="titulos_menu">
+                            Cadastros
                         </li>
                         <li>
                             <h:commandLink action="#{professorBean.cadastrarNovo()}" class="btn btn-lg">
@@ -31,8 +31,8 @@
                                 <span class="glyphicon glyphicon-headphones"></span> Aluno
                             </h:commandLink>
                         </li>
-                        <li class="alert alert-info h4">
-                            <span class="glyphicon glyphicon-eye-open"/> Listas
+                        <li class="titulos_menu">
+                            Listas
                         </li>
                         <li>
                             <h:commandLink action="/professor/ListarProfessores" class="btn btn-link btn-lg">
