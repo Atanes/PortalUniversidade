@@ -5,42 +5,28 @@
  */
 package modelos;
 
-import java.io.Serializable;
-import java.util.Objects;
-import javax.faces.bean.ViewScoped;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author UsuarioGeral
  */
-@javax.persistence.Entity
-@ViewScoped
-public class Professor implements Serializable {
+@Entity
+public class Professor extends Pessoa {
     
-    @Id
-    @GeneratedValue
-    private Long id;
-    private String nome;
     private String titulacao;
     private Integer anoContratacao;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    
+    @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+    @JoinTable(name="Professor_Orienta_Aluno", joinColumns={@JoinColumn(name="PROFESSOR_ID", referencedColumnName="id")}, inverseJoinColumns={@JoinColumn(name="ALUNO_ID", referencedColumnName="id")})
+    private List<Aluno> alunos = new ArrayList<Aluno>();
 
     public String getTitulacao() {
         return titulacao;
@@ -58,32 +44,16 @@ public class Professor implements Serializable {
         this.anoContratacao = anoContratacao;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 59 * hash + Objects.hashCode(this.id);
-        hash = 59 * hash + Objects.hashCode(this.nome);
-        return hash;
+    public List<Aluno> getAlunos() {
+        return alunos;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Professor other = (Professor) obj;
-        if (!Objects.equals(this.id, other.id)) {
-            return false;
-        }
-        if (!Objects.equals(this.nome, other.nome)) {
-            return false;
-        }
-        return true;
-    }
+    public void adicionaAluno(Aluno aluno) {
+		this.alunos.add(aluno);
+	}
     
-    
-    
+    public void removeAluno(Aluno aluno) {
+		this.alunos.remove(aluno);		
+	}
+
 }

@@ -10,6 +10,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import modelos.Aluno;
 import modelos.Professor;
 
 /**
@@ -23,6 +24,7 @@ public class ProfessorBean {
 
     private Professor prof = new Professor();
     private List<Professor> professores;
+    private List<Aluno> alunos;
 
     /**
      * Creates a new instance of ProfessorBean
@@ -39,6 +41,7 @@ public class ProfessorBean {
         this.prof = prof;
     }
 
+    
     public String salva() {
 
         EntityManager em = JPAUtil.getEntityManager();
@@ -91,6 +94,14 @@ public class ProfessorBean {
         this.professores = null;
 
     }
+    
+    public void buscaProfessor(Professor prof){
+        EntityManager em = JPAUtil.getEntityManager();
+        
+        em.getTransaction().begin();
+        this.prof = em.find(Professor.class, prof.getId());
+        
+    }
 
     public String alterar(Professor p) {
         this.prof = p;
@@ -100,5 +111,13 @@ public class ProfessorBean {
     public String cadastrarNovo() {
         prof = new Professor();
         return "/professor/CadastrarProfessor";
+    }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
     }
 }
