@@ -41,7 +41,6 @@ public class ProfessorBean {
         this.prof = prof;
     }
 
-    
     public String salva() {
 
         EntityManager em = JPAUtil.getEntityManager();
@@ -94,13 +93,18 @@ public class ProfessorBean {
         this.professores = null;
 
     }
-    
-    public void buscaProfessor(Professor prof){
+
+    public String buscaProfessor(Professor prof) {
         EntityManager em = JPAUtil.getEntityManager();
-        
+
         em.getTransaction().begin();
         this.prof = em.find(Professor.class, prof.getId());
-        
+        em.getTransaction().commit();
+
+        em.close();
+
+        return "/professor/Prof_Orientacao_Aluno";
+
     }
 
     public String alterar(Professor p) {
@@ -119,5 +123,9 @@ public class ProfessorBean {
 
     public void setAlunos(List<Aluno> alunos) {
         this.alunos = alunos;
+    }
+
+    public List<Aluno> getAlunosOrientados() {
+        return this.prof.getAlunos();
     }
 }

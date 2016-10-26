@@ -20,13 +20,19 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class Professor extends Pessoa {
-    
+
     private String titulacao;
     private Integer anoContratacao;
-    
-    @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
-    @JoinTable(name="Professor_Orienta_Aluno", joinColumns={@JoinColumn(name="PROFESSOR_ID", referencedColumnName="id")}, inverseJoinColumns={@JoinColumn(name="ALUNO_ID", referencedColumnName="id")})
-    private List<Aluno> alunos = new ArrayList<Aluno>();
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "Professor_Orienta_Aluno", joinColumns = {
+        @JoinColumn(name = "PROFESSOR_ID", referencedColumnName = "id")}, inverseJoinColumns = {
+        @JoinColumn(name = "ALUNO_ID", referencedColumnName = "id")})
+    private final List<Aluno> alunos;
+
+    public Professor() {
+        this.alunos = new ArrayList<>();
+    }
 
     public String getTitulacao() {
         return titulacao;
@@ -49,11 +55,11 @@ public class Professor extends Pessoa {
     }
 
     public void adicionaAluno(Aluno aluno) {
-		this.alunos.add(aluno);
-	}
-    
+        this.alunos.add(aluno);
+    }
+
     public void removeAluno(Aluno aluno) {
-		this.alunos.remove(aluno);		
-	}
+        this.alunos.remove(aluno);
+    }
 
 }

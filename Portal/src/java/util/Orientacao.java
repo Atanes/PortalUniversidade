@@ -21,11 +21,11 @@ public class Orientacao {
                
         EntityTransaction tx = em.getTransaction();
         tx.begin();
-        Aluno a1 = em.find(Aluno.class, 7L);
-        Aluno a2 = em.find(Aluno.class, 9L);
+        Aluno a1 = em.find(Aluno.class, 9L);
+        Aluno a2 = em.find(Aluno.class, 11L);
         Aluno a3 = em.find(Aluno.class, 10L);
         
-        Professor prof = em.find(Professor.class, 6L);
+        Professor prof = em.find(Professor.class, 5L);
         
         prof.adicionaAluno(a1);
         prof.adicionaAluno(a2);

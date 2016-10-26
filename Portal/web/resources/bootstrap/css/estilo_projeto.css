@@ -85,3 +85,14 @@ tbody tr:nth-child(odd){
     padding-right: 5px;
     padding-left: 5px;
 }
+
+.orientacao_prof label{
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2e6da4;
+}
+.orientacao_prof legend{
+    font-size: 1.2em;    
+    color: #2e6da4;
+}
