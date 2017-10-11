@@ -43,7 +43,7 @@ public class AlunoBean {
             this.alunos = a.getResultList();
             em.close();
         }
-        
+
         return alunos;
     }
 
@@ -54,7 +54,7 @@ public class AlunoBean {
             // Inicia uma transação com o banco de dados.
             em.getTransaction().begin();
             // Verifica se a pessoa ainda não está salva no banco de dados.
-            if (aluno.getId() != null) {
+            if (aluno.getMatricula() != null) {
                 //Atualiza os dados da pessoa.
                 aluno = em.merge(aluno);
             } else {
